@@ -519,4 +519,58 @@ print("Here's what I got from give_me_five():", number)
 answer = ask_yes_no("\nPlease enter 'y' or 'n': ")
 print("Thanks for entering:", answer)
 input("\n\nPress the enter key to exit.")
+#demonstrates reading and closing text file
+print("\n\n=================================================================")
+print("opening and closinng a text file.")
+seq_file = open("sequences.txt", "r")
+seq_file.close()
+
+print("\n\n=================================================================")
+#demonstrates each character from the text file
+print("\nReading characters from the file.")
+seq_file = open("C:/Users/josephkr/Desktop/programming_python/sequences.txt", "r")
+print(seq_file.read(1))
+print(seq_file.read(2))
+seq_file.close()
+
+print("\n\n=================================================================")
+#demonstrates reading an entire file
+print("\nReading characters from the file.")
+seq_file = open("C:/Users/josephkr/Desktop/programming_python/sequences.txt", "r")
+entire_file = seq_file.read()
+print(entire_file)
+seq_file.close()
+
+print("\n\n=================================================================")
+#demonstrates reading a character from  a line
+print("\nReading characters from a line.")
+seq_file = open("sequences.txt", "r")
+print(seq_file.readline(1))
+print(seq_file.readline(2))
+seq_file.close()
+
+print("\n\n=================================================================")
+print("\nReading one line at a time.")
+seq_file = open("sequences.txt", "r")
+print(seq_file.readline())
+print(seq_file.readline())
+seq_file.close()
+
+print("\n\n=================================================================")
+print("\nReading the entire file into a list.")
+seq_file = open("sequences.txt", "r")
+lines = seq_file.readlines()
+print(lines)
+print(len(lines))
+for line in lines:
+    print(line)
+seq_file.close()
+
+print("\n\n=================================================================")
+print("\nLooping through the file, line by line.")
+text_file = open("sequences.txt", "r")
+for line in text_file:
+    print(line)
+text_file.close()
+input("\n\nPress the enter key to exit.")
 
